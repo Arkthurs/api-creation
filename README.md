@@ -40,6 +40,7 @@ This project is a RESTful API built using Express.js and MongoDB with Mongoose a
 - [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env): A Babel preset for each environment and because Jest didn't want to run it without it.
 - [babel-cli](https://babeljs.io/docs/en/babel-cli): Babel command line.
 - [babel-preset-env](https://babeljs.io/docs/en/babel-preset-env): Babel preset for compiling JavaScript.
+- [@playwright/test](https://www.npmjs.com/package/@playwright/test): A Node.js library for browser automation and E2E testing.
 - [jest](https://jestjs.io/): Jest is a framework for testing JavaScript code. Unit testing is the main usage of it.
 - [nodemon](https://nodemon.io/): Utility that automatically restarts your Node.js server during development.
 - [supertest](https://github.com/visionmedia/supertest): Using Supertest, we can test endpoints and routes on HTTP servers.

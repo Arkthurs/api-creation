@@ -20,7 +20,7 @@ This project is a RESTful API built using Express.js and MongoDB with Mongoose a
 ## Usage
 - Start the server:
   ```bash
-  nodemon dev
+  nodemon server.js
   ```
 - Access the API at `http://localhost:3000/api`
 

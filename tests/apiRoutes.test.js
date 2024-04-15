@@ -10,7 +10,7 @@ app.use('/api', apiRoutes) // Mount the router at /api
 
 /* Connecting to the database before each test. */
 beforeEach(async () => {
-  await mongoose.connect(process.env.dbURI='')// input the db link from MongoDB in ''
+  await mongoose.connect(process.env.dbURI='mongodb+srv://<USERNAME>:<PASSWORD>@cluster0.jw0besa.mongodb.net/marketresearch')// input the db link from MongoDB in ''
 })
 
 

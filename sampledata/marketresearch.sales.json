@@ -1,0 +1,104 @@
+[{
+  "tag": "Singleplayer",
+  "count": 62280,
+  "revenueAverage": 620000,
+  "revenueMedian": 800,
+  "earningSplit": {
+    "To5k": 0.69,
+    "To25k": 0.11,
+    "To100k": 0.08,
+    "To1mil": 0.08,
+    "Over1mil": 0.04
+  }
+},
+{
+  "tag": "Indie",
+  "count": 59330,
+  "revenueAverage": 222000,
+  "revenueMedian": 690,
+  "earningSplit": {
+    "To5k": 0.74,
+    "To25k": 0.13,
+    "To100k": 0.07,
+    "To1mil": 0.05,
+    "Over1mil": 0.02
+  }
+},
+{
+  "tag": "Action",
+  "count": 47831,
+  "revenueAverage": 760000,
+  "revenueMedian": 690,
+  "earningSplit": {
+    "To5k": 0.71,
+    "To25k": 0.11,
+    "To100k": 0.07,
+    "To1mil": 0.06,
+    "Over1mil": 0.04
+  }
+},
+{
+  "tag": "Casual",
+  "count": 45353,
+  "revenueAverage": 110000,
+  "revenueMedian": 520,
+  "earningSplit": {
+    "To5k": 0.78,
+    "To25k": 0.11,
+    "To100k": 0.06,
+    "To1mil": 0.04,
+    "Over1mil": 0.01
+  }
+},
+{
+  "tag": "Adventure",
+  "count": 45055,
+  "revenueAverage": 660000,
+  "revenueMedian": 1100,
+  "earningSplit": {
+    "To5k": 0.67,
+    "To25k": 0.13,
+    "To100k": 0.08,
+    "To1mil": 0.07,
+    "Over1mil": 0.04
+  }
+},
+{
+  "tag": "2D",
+  "count": 33562,
+  "revenueAverage": 170000,
+  "revenueMedian": 570,
+  "earningSplit": {
+    "To5k": 0.74,
+    "To25k": 0.12,
+    "To100k": 0.07,
+    "To1mil": 0.06,
+    "Over1mil": 0.02
+  }
+},
+{
+  "tag": "Simulation",
+  "count": 22446,
+  "revenueAverage": 600000,
+  "revenueMedian": 1700,
+  "earningSplit": {
+    "To5k": 0.63,
+    "To25k": 0.15,
+    "To100k": 0.09,
+    "To1mil": 0.09,
+    "Over1mil": 0.04
+  }
+},
+{
+  "tag": "Test2",
+  "count": 59330,
+  "revenueAverage": 2220000,
+  "revenueMedian": 690,
+  "earningSplit": {
+    "To5k": 0.74,
+    "To25k": 0.13,
+    "To100k": 0.07,
+    "To1mil": 0.05,
+    "Over1mil": 0.02
+  }
+}]

@@ -1,0 +1,99 @@
+body{
+    margin: 20px auto;
+    text-align: center;
+    background-color: #000;
+    color: #FFF;
+    font-family: "Exo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#addNewData {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+
+.tag {
+    background-color: #313030;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+a:hover {
+    color: #48A71F;
+}
+
+.chart {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #1D1D1D;
+}
+
+.data {
+    background-color: #1D1D1D;
+    width: 500px;
+    margin: 0 auto;
+} 
+
+table {
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+    background-color: #1D1D1D;
+}
+
+table, table td, table tr {
+    border: 1px solid silver;
+}
+
+table td {
+    padding: 8px;
+}
+
+button {
+    background-color: #1A1A1A;
+    color: #48A71F;
+    border-radius: 1px;
+    border: 1px solid black;
+    height: 30px;
+    width: 150px;
+    margin: 5px auto;
+}
+
+button:hover {
+    background: linear-gradient(0deg, rgba(51,195,34,1) 5%, rgba(26,26,26,1) 19%);
+}
+
+#delete {
+    color: red;
+}
+
+#delete:hover {
+    background: linear-gradient(0deg, red 5%, rgba(26,26,26,1) 19%);
+}
+
+#dataForm {
+    background-color: #1A1A1A;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+#dropZone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#updateForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

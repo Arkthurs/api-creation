@@ -1,0 +1,72 @@
+<%- include('partials/header') -%>
+
+<h1 class="title">Add New Sale Stats</h1>
+<div id="dropZone">
+    <p>Drag and drop JSON file here</p>
+</div>
+<button id="submitButton" style="display: none;">Submit Data</button>
+
+<button id='homeButton'>Go back to start</button>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropZone = document.getElementById('dropZone')
+        const submitButton = document.getElementById('submitButton')
+
+        dropZone.addEventListener('dragover', function(event) {
+            event.preventDefault()
+            dropZone.style.background = '#F0F0F0'
+        })
+
+        dropZone.addEventListener('dragleave', function(event) {
+            event.preventDefault()
+            dropZone.style.background = '#FFF'
+        })
+
+        dropZone.addEventListener('drop', function(event) {
+            event.preventDefault()
+            dropZone.style.background = 'silver'
+
+            const file = event.dataTransfer.files[0]
+            const reader = new FileReader()
+            reader.onload = function(e) {
+                const content = e.target.result
+                const jsonData = JSON.parse(content)
+                submitButton.style.display = 'block'
+                submitButton.addEventListener('click', function() {
+                    postData(jsonData)
+                    submitButton.disabled = true
+                })
+            }
+            reader.readAsText(file)
+        })
+
+        function postData(data) {
+            fetch('/api/duomenys', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error submitting data. Status: ' + response.status + ' ' + response.statusText)
+                }
+                return response.json()
+            })
+            .then(data => {
+                console.log('Data successfully submitted:', data)
+                alert('Data uploaded successfully!')
+                window.location.href = '/'
+            })
+            .catch(error => {
+                console.error('Error:', error)
+            })
+        }
+        document.getElementById('homeButton').addEventListener('click', function() {
+            window.location.href = '/'
+        })
+    })
+</script>
+
+<%- include('partials/footer') -%>

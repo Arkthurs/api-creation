@@ -1,0 +1,74 @@
+<%- include('partials/header'); -%>
+
+<h1 class="title">Update Sale Stats</h1>
+<form id="updateForm">
+    <label for="tag">Tag:</label>
+    <input type="text" id="tag" name="tag" value="<%= data.tag %>">
+    
+    <label for="count">Count:</label>
+    <input type="number" id="count" name="count" value="<%= data.count %>">
+
+    <label for="revenueAverage">Revenue Average:</label>
+    <input type="number" id="revenueAverage" name="revenueAverage" value="<%= data.revenueAverage %>">
+
+    <label for="revenueMedian">Revenue Median:</label>
+    <input type="number" id="revenueMedian" name="revenueMedian" value="<%= data.revenueMedian %>">
+    
+    <label for="earningSplit">Earning Split:</label>
+    <input type="number" id="To5k" name="earningSplit.To5k" placeholder="Revenue Split (To5k)" value="<%= data.earningSplit.To5k %>">
+    <input type="number" id="To25k" name="earningSplit.To25k" placeholder="Revenue Split (To25k)" value="<%= data.earningSplit.To25k %>">
+    <input type="number" id="To100k" name="earningSplit.To100k" placeholder="Revenue Split (To100k)" value="<%= data.earningSplit.To100k %>">
+    <input type="number" id="To1mil" name="earningSplit.To1mil" placeholder="Revenue Split (To1mil)" value="<%= data.earningSplit.To1mil %>">
+    <input type="number" id="Over1mil" name="earningSplit.Over1mil" placeholder="Revenue Split (Over1mil)" value="<%= data.earningSplit.Over1mil %>">
+
+    <button type="submit">Update</button>
+    <button id='homeButton'>Go back to start</button>
+</form>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const updateForm = document.getElementById('updateForm');
+        updateForm.addEventListener('submit', async function(event) {
+            event.preventDefault();
+    
+            const formData = new FormData(updateForm);
+            const updatedData = {};
+            formData.forEach((value, key) => {
+                updatedData[key] = value;
+            });
+    
+            const id = '<%= data._id %>'; // Get the ID of the data to update
+            try {
+                const response = await fetch('/api/duomenys/' + id, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(updatedData),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Error updating data');
+                }
+
+                const updatedDataResponse = await response.json();
+                console.log('Data successfully updated:', updatedDataResponse);
+
+                // Display alert indicating success
+                showAlert('Data updated successfully!');
+
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+        document.getElementById('homeButton').addEventListener('click', function() {
+            window.location.href = '/';
+        })
+    });
+
+    function showAlert(message) {
+        alert(message);
+    }
+</script>
+
+<%- include('partials/footer'); -%>
